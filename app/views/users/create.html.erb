@@ -1,0 +1,10 @@
+<h1>Register</h1>
+
+<%= form_for :user, url: '/users' do |f| %>
+  <%= f.text_field :first_name, class: 'form-control margin-bottom form-width', placeholder: "First name"%>
+  <%= f.text_field :last_name, class: 'form-control margin-bottom form-width', placeholder: "Last name" %>
+  <%= f.text_field :email, class: 'form-control margin-bottom form-width', placeholder: "Email" %>
+  <%= f.password_field :password, class: 'form-control margin-bottom form-width', placeholder: "Password" %>
+  <%= f.password_field :password_confirmation, class: 'form-control margin-bottom form-width', placeholder: "Password Confirmation" %>
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>
