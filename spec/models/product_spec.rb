@@ -17,7 +17,7 @@ RSpec.describe Product, type: :model do
 
     it "does not save if price is missing" do
       category = Category.create(name: "Animals")
-      product = Product.create(name: "cats", price: nil, quantity: 2, category: category)
+      product = Product.create(name: "cats", quantity: 2, category: category)
       expect(product.errors.full_messages).to include "Price can't be blank"
     end
 
